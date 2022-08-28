@@ -4,4 +4,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="bottom_nav_home">Home</string>
     <string name="bottom_nav_settings">Einstellungen</string>
+    <string name="card_procedure_text">Ablaufpläne</string>
+    <string name="card_item_text">Items</string>
 </resources>
