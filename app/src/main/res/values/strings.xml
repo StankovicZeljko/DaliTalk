@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DaliTalk</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_settings">Einstellungen</string>
 </resources>
