@@ -5,11 +5,11 @@
     android:id="@+id/fragmentConfig"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ConfigFragment">
+    tools:context=".fragments.config.ConfigFragment">
 
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/imageButtonProcedures"
         android:layout_width="136dp"
         android:layout_height="98dp"
         android:layout_marginTop="161dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButtonItems"
         android:layout_width="136dp"
         android:layout_height="98dp"
         android:layout_marginTop="30dp"
@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonProcedures" />
 
     <TextView
         android:id="@+id/textView"
@@ -40,7 +40,7 @@
         android:layout_marginBottom="15dp"
         android:text="@string/card_procedure_text"
         android:textColor="@color/design_default_color_on_primary"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonProcedures"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -51,7 +51,7 @@
         android:layout_marginBottom="15dp"
         android:text="@string/card_item_text"
         android:textColor="@color/design_default_color_on_primary"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButtonItems"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
