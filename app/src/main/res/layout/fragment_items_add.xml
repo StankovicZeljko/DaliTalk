@@ -46,7 +46,8 @@
             android:id="@+id/itemAddEditTextDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/item_add_desc_hint" />
+            android:hint="@string/item_add_desc_hint"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageView
@@ -74,7 +75,8 @@
             android:id="@+id/itemAddEditTextTask"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/item_add_task_hint" />
+            android:hint="@string/item_add_task_hint"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
