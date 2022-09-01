@@ -13,10 +13,11 @@ import android.view.ViewGroup;
 
 import com.zeljkostankovic.dalitalk.R;
 import com.zeljkostankovic.dalitalk.adapters.ChooseItemAdapter;
+import com.zeljkostankovic.dalitalk.interfaces.ProceduresAddChooseItemInterface;
 import com.zeljkostankovic.dalitalk.viewModels.ItemViewModel;
 
 
-public class ProceduresAddChooseItemFragment extends Fragment {
+public class ProceduresAddChooseItemFragment extends Fragment implements ProceduresAddChooseItemInterface {
 
     RecyclerView recyclerView;
     ChooseItemAdapter chooseItemAdapter;
@@ -29,7 +30,7 @@ public class ProceduresAddChooseItemFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_procedures_add_choose_item, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerViewExistingItems);
-        chooseItemAdapter = new ChooseItemAdapter();
+        chooseItemAdapter = new ChooseItemAdapter(this);
         itemViewModel = new ViewModelProvider(this).get(ItemViewModel.class);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(chooseItemAdapter);
@@ -40,5 +41,11 @@ public class ProceduresAddChooseItemFragment extends Fragment {
 
 
         return view;
+    }
+
+
+    @Override
+    public void onClickItem(int pos) {
+
     }
 }

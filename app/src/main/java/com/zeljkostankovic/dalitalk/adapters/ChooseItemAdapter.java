@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.zeljkostankovic.dalitalk.R;
+import com.zeljkostankovic.dalitalk.interfaces.ProceduresAddChooseItemInterface;
 import com.zeljkostankovic.dalitalk.modules.Item;
 
 import java.util.Collections;
@@ -20,6 +21,11 @@ import java.util.List;
 public class ChooseItemAdapter extends RecyclerView.Adapter<ChooseItemAdapter.ViewHolder> {
 
     private List<Item> itemList = Collections.emptyList();
+    private final ProceduresAddChooseItemInterface proceduresAddChooseItemInterface;
+
+    public ChooseItemAdapter(ProceduresAddChooseItemInterface proceduresAddChooseItemInterface) {
+        this.proceduresAddChooseItemInterface = proceduresAddChooseItemInterface;
+    }
 
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
@@ -28,11 +34,21 @@ public class ChooseItemAdapter extends RecyclerView.Adapter<ChooseItemAdapter.Vi
         TextView task;
         ImageView imageView;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView, ProceduresAddChooseItemInterface proceduresAddChooseItemInterface) {
             super(itemView);
             description = itemView.findViewById(R.id.chooseListElementDesc);
             task = itemView.findViewById(R.id.chooseListElementTask);
             imageView = itemView.findViewById(R.id.chooseListElementImageView);
+
+            itemView.setOnClickListener(v -> {
+                if( proceduresAddChooseItemInterface != null) {
+                    int pos = getAdapterPosition();
+
+                    if( pos != RecyclerView.NO_POSITION) {
+                        proceduresAddChooseItemInterface.onClickItem(pos);
+                    }
+                }
+            });
 
         }
 
@@ -48,8 +64,10 @@ public class ChooseItemAdapter extends RecyclerView.Adapter<ChooseItemAdapter.Vi
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_choose_item_list_element, parent, false));
+        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_choose_item_list_element, parent, false), proceduresAddChooseItemInterface);
     }
+
+
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
@@ -69,6 +87,7 @@ public class ChooseItemAdapter extends RecyclerView.Adapter<ChooseItemAdapter.Vi
         this.itemList = itemList;
         notifyDataSetChanged();
     }
+
 
 
 
