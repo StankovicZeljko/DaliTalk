@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_configFragment_to_itemsListFragment"
             app:destination="@id/itemsListFragment" />
+        <action
+            android:id="@+id/action_configFragment_to_proceduresListFragment"
+            app:destination="@id/proceduresListFragment" />
     </fragment>
     <fragment
         android:id="@+id/itemsListFragment"
@@ -36,5 +39,32 @@
         <action
             android:id="@+id/action_itemsAddFragment_to_itemsListFragment"
             app:destination="@id/itemsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proceduresListFragment"
+        android:name="com.zeljkostankovic.dalitalk.fragments.procedures.ProceduresListFragment"
+        android:label="fragment_procedures_list"
+        tools:layout="@layout/fragment_procedures_list" >
+        <action
+            android:id="@+id/action_proceduresListFragment_to_proceduresAddFragment"
+            app:destination="@id/proceduresAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proceduresAddFragment"
+        android:name="com.zeljkostankovic.dalitalk.fragments.procedures.ProceduresAddFragment"
+        android:label="fragment_procedures_add"
+        tools:layout="@layout/fragment_procedures_add" >
+        <action
+            android:id="@+id/action_proceduresAddFragment_to_proceduresAddChooseItemFragment"
+            app:destination="@id/proceduresAddChooseItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/proceduresAddChooseItemFragment"
+        android:name="com.zeljkostankovic.dalitalk.fragments.procedures.ProceduresAddChooseItemFragment"
+        android:label="fragment_procedures_add_choose_item"
+        tools:layout="@layout/fragment_procedures_add_choose_item" >
+        <action
+            android:id="@+id/action_proceduresAddChooseItemFragment_to_proceduresAddFragment"
+            app:destination="@id/proceduresAddFragment" />
     </fragment>
 </navigation>

@@ -11,5 +11,6 @@
     <string name="item_add_desc_hint">Bezeichnung</string>
     <string name="item_add_task_hint">Aufgabe</string>
     <string name="item_add_cancel_btn">Abbrechen</string>
-    <string name="item_add_save_btn" >Speichern</string>
+    <string name="item_add_save_btn">Speichern</string>
+    <string name="add_proced_date">Datum eingeben</string>
 </resources>

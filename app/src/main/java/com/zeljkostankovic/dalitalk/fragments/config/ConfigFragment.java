@@ -15,20 +15,21 @@ import com.zeljkostankovic.dalitalk.R;
 
 public class ConfigFragment extends Fragment {
 
+    ImageButton itemsButtom;
+    ImageButton procedureButton;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_config, container, false);
 
-        ImageButton itemsButtom = (ImageButton) view.findViewById(R.id.imageButtonItems);
-        itemsButtom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_configFragment_to_itemsListFragment);
-            }
-        });
+        itemsButtom = view.findViewById(R.id.imageButtonItems);
+        procedureButton = view.findViewById(R.id.imageButtonProcedures);
 
+        itemsButtom.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_configFragment_to_itemsListFragment));
+        procedureButton.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_configFragment_to_proceduresListFragment));
 
 
         return view;
