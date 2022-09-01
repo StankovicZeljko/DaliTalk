@@ -14,14 +14,45 @@ public class Item {
 
     public String description;
     public String task;
-    public Bitmap image;
+    public String imageUrl;
 
     public Item() {};
 
-    public Item(String desc, String task, Bitmap img) {
+    public Item(String desc, String task, String img) {
         this.description = desc;
         this.task = task;
-        this.image = img;
+        this.imageUrl = img;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
 }
