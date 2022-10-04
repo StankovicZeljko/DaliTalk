@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">DaliTalk</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_nav_home">Home</string>
+    <string name="bottom_nav_settings">Einstellungen</string>
+    <string name="card_procedure_text">Ablaufpläne</string>
+    <string name="card_item_text">Items</string>
+    <string name="item_add_select_btn">Auswählen</string>
+    <string name="item_add_btn_camera">Aufnehmen</string>
+    <string name="item_add_desc_hint">Bezeichnung</string>
+    <string name="item_add_task_hint">Aufgabe</string>
+    <string name="item_add_cancel_btn">Abbrechen</string>
+    <string name="item_add_save_btn">Speichern</string>
+    <string name="add_proced_date">Datum eingeben</string>
 </resources>
